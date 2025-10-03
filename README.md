@@ -1,100 +1,60 @@
-# Retail Sales Data Analysis & Insights
+# Sales Data Cleaning & Transformation Project
 
-![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)
-![Libraries](https://img.shields.io/badge/Libraries-Pandas%20%7C%20Matplotlib%20%7C%20Seaborn-orange.svg)
-![Project Status](https://img.shields.io/badge/Status-Completed-green.svg)
 
-A comprehensive data analysis project focused on cleaning, transforming, and analyzing product sales data to uncover key business insights. This project demonstrates a full data analysis workflow, from raw data ingestion to final actionable recommendations, making it a key component of my professional portfolio.
+This project showcases a comprehensive data cleaning and transformation process applied to a raw product sales dataset. Developed as a hands-on exercise, it demonstrates critical skills in preparing real-world data for robust analysis. My objective was to resolve various data quality issues, ensuring the dataset's integrity and readiness for downstream analytical tasks and business intelligence reporting. This directly reflects my capability in the crucial **Extract, Transform, Load (ETL)** stage of the data pipeline.
 
-## Table of Contents
-- [Project Overview](#project-overview)
-- [Problem Statement](#problem-statement)
-- [Dataset](#dataset)
-- [Tools and Libraries](#tools-and-libraries)
-- [Data Cleaning and Preparation (ETL)](#data-cleaning-and-preparation-etl)
-- [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
-- [Key Insights & Business Recommendations](#key-insights--business-recommendations)
-- [How to Run This Project](#how-to-run-this-project)
-- [Contact](#contact)
+---
 
-## Project Overview
+## 📊 Dataset Description
 
-In this project, I performed an in-depth analysis of a retail dataset to understand sales performance and customer behavior. The project involved a significant data cleaning and transformation phase, followed by exploratory data analysis to extract meaningful patterns and insights. The final output is a clean, merged dataset and a series of visualizations and findings that could help a business make data-driven decisions.
+The project utilizes a relational dataset composed of three CSV files, simulating a typical e-commerce sales environment:
 
-## Problem Statement
+* `customers.csv`: Contains unique customer identifiers and names.
+* `products.csv`: Details product information, including IDs, names, and unit prices.
+* `orders.csv`: The transactional core, linking customers to products via order details (order ID, customer ID, product ID, quantity).
 
-The primary goal of this project was to take raw, messy sales data and transform it into a clean, usable format for analysis. The key objectives were to:
-1.  Clean and pre-process data from multiple sources (`orders`, `products`, `customers`).
-2.  Merge the datasets to create a single, unified view of sales transactions.
-3.  Derive new, meaningful columns, such as `total_price`.
-4.  Perform exploratory analysis to answer key business questions like:
-    * What are the top-selling and highest-revenue products?
-    * Who are the most valuable customers contributing the most to revenue?
-    * What is the daily sales trend?
+**Files in this Repository:**
+* `product_sales_raw.csv`: The original, uncleaned dataset with various inconsistencies.
+* `product_sales_cleaned.csv`: The final, transformed dataset, ready for analysis.
 
-## Dataset
+---
 
-The raw data is contained in three separate CSV files:
-* `orders.csv`: Contains transaction data including `order_id`, `date`, `customer_id`, `product_id`, and `qty` (quantity).
-* `products.csv`: Contains product details like `product_name` and `price (in INR)`.
-* `customers.csv`: Contains customer information, mapping `customer_id` to `customer` name.
+## ✨ Key Data Cleaning & Transformation Steps
 
-## Tools and Libraries
+This project meticulously addressed several common data quality challenges, employing systematic approaches to ensure data accuracy and consistency:
 
-* **Python:** The core programming language for the analysis.
-* **Pandas:** Used for data manipulation, cleaning, and merging.
-* **Matplotlib & Seaborn:** Used for data visualization to create charts and graphs.
-* **Jupyter Notebook:** The environment used for developing, documenting, and sharing the analysis.
+1.  **Standardizing Text Fields:**
+    * Corrected inconsistent capitalization in `customer_name` (e.g., "JaY" to "Jay").
+    * Trimmed leading/trailing whitespaces from `product_name` (e.g., "  Apple" to "Apple").
+2.  **Validating and Correcting Data Types:**
+    * Identified and removed non-numeric characters from the `quantity` column (e.g., "10Q" to "10") to ensure it was purely numeric.
+    * Verified `price` columns were correctly formatted as numerical values to support calculations.
+3.  **Handling Missing Values (Imputation/Removal):**
+    * Strategically addressed null or blank entries in critical columns like `quantity` to prevent errors in aggregations and analyses.
+4.  **Identifying and Removing Duplicates:**
+    * Implemented logic to detect and eliminate duplicate `order_id` records, maintaining the uniqueness and integrity of transactional data.
+5.  **Feature Engineering / Data Enrichment:**
+    * Created a new derived column, `total_price`, in the `orders` table by multiplying `price` and `quantity`. This adds immediate analytical value by providing the total value of each order line item.
 
-## Data Cleaning and Preparation (ETL)
+---
 
-The initial dataset required several cleaning and transformation steps to be ready for analysis. The key steps performed were:
-* **Correcting Data Types:** The `qty` column in `orders.csv` contained non-numeric characters (e.g., '8Q'). These were stripped to keep only integer values. A blank `qty` value was found and handled.
-* **Handling Inconsistent Casing:** Customer names in `customers.csv` (e.g., 'JaY', 'johN') were standardized to lowercase for consistency.
-* **Removing Duplicates:** Checked for and removed duplicate `customer_id` entries in the `customers.csv` file (customer_id 35 appeared twice).
-* **Data Enrichment (Joining Tables):** Merged the `orders`, `customers`, and `products` tables based on their respective IDs to create a single, comprehensive DataFrame.
-* **Feature Engineering:** Created a new column `total_price` by multiplying the `qty` and the product `price`.
-* **Cleaning Price Column:** Removed the '₹' symbol and extra whitespace from the `price (in INR)` column in `products.csv` and converted it to a numeric type.
+## 🎯 Skills & Technologies Demonstrated
 
-## Exploratory Data Analysis (EDA)
+This project showcases the following highly sought-after skills for data roles:
 
-Several questions were investigated to understand the data:
+* **Data Cleaning & Preprocessing:** Expertise in identifying and rectifying data inconsistencies, critical for reliable analysis.
+* **ETL (Extract, Transform, Load) Principles:** Practical application of data transformation techniques to prepare raw data for a data warehouse or analytical platform.
+* **Data Quality Assurance:** Commitment to maintaining high data integrity and accuracy.
+* **Problem-Solving & Logical Reasoning:** Ability to systematically approach and resolve data-related challenges.
+* **Microsoft Excel Proficiency:** Utilized advanced Excel functions for efficient data manipulation, validation, and transformation (e.g., `TRIM`, `PROPER`, `SUBSTITUTE`, `VALUE`, `REMOVE DUPLICATES`, pivot tables/lookups for validation).
+* **Attention to Detail:** Meticulous execution of cleaning steps, ensuring no data errors were overlooked.
+* **(Future Scope - highlights proactive learning):** Foundation laid for automating similar processes using Python (Pandas) or structuring data within SQL databases.
 
-1.  **Which products generate the most revenue?**
-    * **Finding:** An analysis of total sales per product shows that **Chicken and Apple are the top two products**, generating ₹22,750 and ₹21,600 in revenue respectively. This makes them the most critical assets for the business from a revenue standpoint.
-    
+---
 
-2.  **Who are the top 5 customers by spending?**
-    * **Finding:** The analysis revealed that a small group of customers drives a significant portion of revenue. **Mike is the top customer with ₹10,480 in total spending**, followed by Ravi and Bruce.
-   
+## 📈 Next Steps & Potential Enhancements
 
-3.  **What is the overall sales trend?**
-    * **Finding:** An analysis of total sales per day shows daily fluctuations, with a **noticeable peak in sales on February 12th, 2023**. Investigating the cause of such peaks could reveal opportunities for event-based promotions.
-   
-
-## Key Insights & Business Recommendations
-
-Based on the analysis, the following insights were uncovered:
-
-* **Insight 1: High-Value Products Drive Revenue.** While items like Eggs and Yogurt are sold frequently, high-priced items like **Chicken (₹250)** and **Apples (₹200)** are the main revenue drivers.
-    * **Recommendation:** Create targeted marketing campaigns or bundle offers featuring these high-revenue products. For example, "Get 10% off on Apples with every purchase of Chicken."
-
-* **Insight 2: Top Customers are Vital.** The top 3 customers (**Mike, Ravi, and Bruce**) contribute over 45% of the total revenue in this dataset.
-    * **Recommendation:** Implement a customer loyalty program to retain these high-value customers. Offer exclusive discounts or early access to new products to enhance their engagement and reward their loyalty.
-
-* **Insight 3: Sales Peaks Suggest Promotion Opportunities.** The spike in sales on Feb 12th indicates that certain days have unusually high activity.
-    * **Recommendation:** Analyze the events or promotions that may have occurred on peak sales days. This pattern can be leveraged to plan future marketing calendars and sales events to maximize revenue.
-
-## How to Run This Project
-
-To replicate this analysis, an analyst would typically:
-1.  Clone the repository.
-2.  Install the required libraries (`pandas`, `matplotlib`, `seaborn`).
-3.  Run the analysis script or Jupyter Notebook (`Sales Analysis.ipynb`) to perform the data cleaning and generate the visualizations.
-
-This README summarizes the key findings from that analysis.
-
-## Contact
-Abishmita Swain - abishmita13@gmail.com
-
-LinkedIn - www.linkedin.com/in/abishmita-swain-4a0103362
+* **Automation with Python:** Implement a Python script using `pandas` to automate the cleaning process, enhancing efficiency and scalability.
+* **Database Integration:** Load the cleaned data into an SQL database (e.g., SQLite, PostgreSQL) and perform advanced queries.
+* **Exploratory Data Analysis (EDA):** Conduct an in-depth EDA to uncover insights, visualize trends, and generate reports.
+* **Dashboard Creation:** Build an interactive dashboard using tools like Power BI or Tableau to visualize key sales metrics.
